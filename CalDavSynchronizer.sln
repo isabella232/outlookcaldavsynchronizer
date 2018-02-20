@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalDavSynchronizer", "CalDavSynchronizer\CalDavSynchronizer.csproj", "{64937844-752B-49A4-9B3F-3526601E93E1}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalDavSynchronizer", "CalDa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalDavSynchronizer.UnitTests", "CalDavSynchronizer.UnitTest\CalDavSynchronizer.UnitTests.csproj", "{60B1D6FA-B087-42D8-B330-7C147B62FC7A}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CalDavSynchronizer.Setup", "CalDavSynchronizer.Setup\CalDavSynchronizer.Setup.vdproj", "{C05F2805-55A8-4ABB-9892-515781049EB6}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SnapAppointmentsOutlookSync.Setup", "CalDavSynchronizer.Setup\CalDavSynchronizer.Setup.vdproj", "{C05F2805-55A8-4ABB-9892-515781049EB6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenSync", "GenSync\GenSync.csproj", "{76C932E7-ECA5-4010-B602-2104327EE5EE}"
 EndProject
@@ -49,6 +49,7 @@ Global
 		{60B1D6FA-B087-42D8-B330-7C147B62FC7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60B1D6FA-B087-42D8-B330-7C147B62FC7A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C05F2805-55A8-4ABB-9892-515781049EB6}.Debug|Any CPU.ActiveCfg = Debug
+		{C05F2805-55A8-4ABB-9892-515781049EB6}.Debug|Any CPU.Build.0 = Debug
 		{C05F2805-55A8-4ABB-9892-515781049EB6}.Release|Any CPU.ActiveCfg = Release
 		{76C932E7-ECA5-4010-B602-2104327EE5EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{76C932E7-ECA5-4010-B602-2104327EE5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU

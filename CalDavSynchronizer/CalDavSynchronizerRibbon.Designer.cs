@@ -71,8 +71,8 @@ namespace CalDavSynchronizer
       // tab1
       // 
       this.tab1.Groups.Add(this.group1);
-      this.tab1.KeyTip = "CDS";
-      this.tab1.Label = "CalDav Synchronizer";
+      this.tab1.KeyTip = "SAS";
+      this.tab1.Label = "SnapAppointments Outlook Sync";
       this.tab1.Name = "tab1";
       // 
       // group1
@@ -83,7 +83,7 @@ namespace CalDavSynchronizer
       this.group1.Items.Add(this.AboutButton);
       this.group1.Items.Add(this.ReportsButton);
       this.group1.Items.Add(this.StatusesButton);
-      this.group1.Label = "CalDav Synchronizer";
+      this.group1.Label = "SnapAppointments Outlook Sync";
       this.group1.Name = "group1";
       // 
       // SynchronizeNowButton

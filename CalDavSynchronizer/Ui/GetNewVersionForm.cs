@@ -121,18 +121,18 @@ namespace CalDavSynchronizer.Ui
       try
       {
         
-        var extractDirectory = Path.Combine (Path.GetTempPath(), "CalDavSynchronizer", Guid.NewGuid().ToString());
+        var extractDirectory = Path.Combine (Path.GetTempPath(), "SnapAppointmentsOutlookSync", Guid.NewGuid().ToString());
         Directory.CreateDirectory (extractDirectory);
         ZipFile.ExtractToDirectory (_archivePath, extractDirectory);
         File.Delete (_archivePath);
         MessageBox.Show (
-               Strings.Get($"You need to restart Outlook after installing the new version!"),
-               Strings.Get($"Outlook restart required"),
+               Strings.Get($"You must restart Outlook after installing the new version."),
+               Strings.Get($"Outlook Restart Required"),
                MessageBoxButtons.OK,
                MessageBoxIcon.Information);
 
         // process hast to be a GC root to prevent it from being garbage collected.
-        var msiFile = Path.Combine (extractDirectory, "CalDavSynchronizer.Setup.msi");
+        var msiFile = Path.Combine (extractDirectory, "SnapAppointmentsOutlookSync.Setup.msi");
         _latestSetupProcess = Process.Start ("msiexec.exe", "/i \"" + msiFile + "\" /passive");
         if (_latestSetupProcess != null)
         {
@@ -156,7 +156,7 @@ namespace CalDavSynchronizer.Ui
       catch (Exception ex)
       {
         s_logger.Warn ("Can't extract new version", ex);
-        MessageBox.Show (Strings.Get($"Can't extract new version!"), Strings.Get($"CalDav Synchronizer download failed"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+        MessageBox.Show (Strings.Get($"Can't extract new version!"), Strings.Get($"SnapAppointments Outlook Sync download failed"), MessageBoxButtons.OK, MessageBoxIcon.Error);
       }
     }
     private void installButton_Click (object sender, EventArgs e)
@@ -174,7 +174,7 @@ namespace CalDavSynchronizer.Ui
       catch (Exception ex)
       {
         s_logger.Warn ("Can't download new version", ex);
-        MessageBox.Show (Strings.Get($"Can't download new version!"), Strings.Get($"CalDav Synchronizer download failed"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+        MessageBox.Show (Strings.Get($"Can't download new version!"), Strings.Get($"SnapAppointments Outlook Sync download failed"), MessageBoxButtons.OK, MessageBoxIcon.Error);
       }
     }
   }

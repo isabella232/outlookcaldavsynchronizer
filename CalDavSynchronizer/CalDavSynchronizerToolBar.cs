@@ -43,7 +43,7 @@ namespace CalDavSynchronizer
 
     public CalDavSynchronizerToolBar (Explorer explorer, object missing, bool wireClickEvents)
     {
-      _toolBar = explorer.CommandBars.Add("CalDav Synchronizer", MsoBarPosition.msoBarTop, false, true);
+      _toolBar = explorer.CommandBars.Add("SnapAppointments Outlook Sync", MsoBarPosition.msoBarTop, false, true);
 
       _toolBarBtnOptions = (CommandBarButton) _toolBar.Controls.Add (1, missing, missing, missing, missing);
       _toolBarBtnOptions.Style = MsoButtonStyle.msoButtonIconAndCaption;
