@@ -84,6 +84,7 @@
     <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>0162</NoWarn>
   </PropertyGroup>
   <!--
     This section defines properties that are set when the "Release" configuration is selected.
