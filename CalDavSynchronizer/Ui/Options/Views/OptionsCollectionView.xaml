@@ -272,9 +272,6 @@
             <Button Command="{Binding AddCommand}" ToolTip="{g:Localize Add new profile}">
                 <Image Stretch="None" Source="pack://application:,,,/CalDavSynchronizer;component/Resources/Add.png" />
             </Button>
-            <Button Command="{Binding AddMultipleCommand}" ToolTip="{g:Localize Add multiple profiles}">
-                <Image Stretch="None" Source="pack://application:,,,/CalDavSynchronizer;component/Resources/AddMultiple.png" />
-            </Button>
             <Button Command="{Binding DeleteSelectedCommand}" ToolTip="{g:Localize Delete selected profile}">
                 <Image Stretch="None" Source="pack://application:,,,/CalDavSynchronizer;component/Resources/Delete.png" />
             </Button>
