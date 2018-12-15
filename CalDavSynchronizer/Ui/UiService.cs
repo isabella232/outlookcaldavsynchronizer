@@ -125,6 +125,8 @@ namespace CalDavSynchronizer.Ui
       window.Icon = BitmapFrame.Create(new Uri("pack://application:,,,/CalDavSynchronizer;component/Resources/ApplicationIcon.ico"));
       ElementHost.EnableModelessKeyboardInterop(window);
 
+      return viewModel.SelectedProfile;
+      
       if (window.ShowDialog() ?? false)
         return viewModel.SelectedProfile;
       else

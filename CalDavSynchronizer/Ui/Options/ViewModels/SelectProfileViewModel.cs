@@ -38,6 +38,8 @@ namespace CalDavSynchronizer.Ui.Options.ViewModels
       ProfileTypes = profileTypes.Select(p => new ProfileViewModel(p)).ToList();
       ProfileTypes.First().IsSelected = true;
 
+      SelectedProfile = ProfileTypes.Single(p => p.Name == "SnapAppointments").ProfileType;
+
       OkCommand = new DelegateCommand (_ => Close (true));
       CancelCommand = new DelegateCommand (_ => Close (false));
     }
