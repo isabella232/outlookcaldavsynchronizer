@@ -197,6 +197,7 @@ namespace CalDavSynchronizer.Ui.Options
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
       this.Name = "SelectResourceForm";
+      this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "Select Resource";
       ((System.ComponentModel.ISupportInitialize)(this._calendarDataGridView)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this._addressBookDataGridView)).EndInit();
