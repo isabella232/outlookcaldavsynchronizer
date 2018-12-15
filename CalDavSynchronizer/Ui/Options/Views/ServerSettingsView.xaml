@@ -44,13 +44,7 @@
                      IsEnabled="{Binding IsChecked, ElementName=UseAccountPasswordCheckBox, Converter={StaticResource BooleanNotConverter}}"
                      Grid.Row="2" Grid.Column="2" />
 
-                <CheckBox IsChecked="{Binding UseAccountPassword}" x:Name="UseAccountPasswordCheckBox" Grid.Row="3" Grid.ColumnSpan="2"  Visibility="{Binding ViewOptions.IsAdvancedViewEnabled, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.Column="2"><g:Localize>Use IMAP/POP3 account password</g:Localize></CheckBox>
-
-                <CheckBox Content="{g:Localize Use WebDAV collection sync}" IsChecked="{Binding UseWebDavCollectionSync}" Visibility="{Binding ViewOptions.IsAdvancedViewEnabled, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.Row="5" Grid.Column="2" ToolTip="{g:Localize WebDAV-Sync is a protocol extension that is defined in RFC 6578 and not supported by all servers.\&#xA;Test or discover settings will check if this is supported.\&#xA;This option can speed up the detection of server changes dramatically but excludes the time range filter.}"/>
-
             </Grid>
-            <Button HorizontalAlignment="Left" Command="{Binding GetAccountSettingsCommand}" Visibility="{Binding ViewOptions.IsAdvancedViewEnabled, Converter={StaticResource BooleanToVisibilityConverter}}"><g:Localize>Get IMAP/POP3 account settings</g:Localize></Button>
-            <Button HorizontalAlignment="Right" Command="{Binding CreateDavResourceCommand}" Visibility="{Binding ViewOptions.IsAdvancedViewEnabled, Converter={StaticResource BooleanToVisibilityConverter}}"><g:Localize>Create DAV resource</g:Localize></Button>
       <Button HorizontalAlignment="Right" Command="{Binding TestConnectionCommand}"><g:Localize>Test or discover settings</g:Localize></Button>
     </DockPanel>
   </GroupBox>
