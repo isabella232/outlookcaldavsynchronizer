@@ -705,7 +705,7 @@ namespace CalDavSynchronizer
               new NewerVersionFoundEventArgs (
                   availableVersion,
                   _availableVersionService.GetWhatsNewNoThrow (currentVersion, availableVersion),
-                  _availableVersionService.DownloadLink));
+                  _availableVersionService.DownloadLink (availableVersion)));
         }
         else
         {

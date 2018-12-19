@@ -94,9 +94,8 @@ namespace CalDavSynchronizer.AutomaticUpdates
       return match.Success ? match.Index : -1;
     }
 
-    public Uri DownloadLink
+    public Uri DownloadLink (Version newVersion)
     {
-      get { return WebResourceUrls.LatestVersionZipFile; }
     }
   }
 }
