@@ -156,7 +156,7 @@ namespace CalDavSynchronizer
       var applicationDataDirectoryBase = Path.Combine (
           Environment.GetFolderPath (
               generalOptions.StoreAppDataInRoamingFolder ? Environment.SpecialFolder.ApplicationData : Environment.SpecialFolder.LocalApplicationData),
-          "CalDavSynchronizer");
+          "SnapAppointments", "SnapAppointments Outlook Sync");
       
       string optionsFilePath;
 
