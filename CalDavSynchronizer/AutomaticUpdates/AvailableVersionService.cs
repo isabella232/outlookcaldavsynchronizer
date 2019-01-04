@@ -19,9 +19,14 @@ using System.Text.RegularExpressions;
 using log4net;
 using CalDavSynchronizer.DataAccess;
 using CalDavSynchronizer.Globalization;
+using Newtonsoft.Json;
 
 namespace CalDavSynchronizer.AutomaticUpdates
 {
+  internal class VersionResponse
+  {
+    public string tag_name { get; set; }
+  }
   internal class AvailableVersionService : IAvailableVersionService
   {
     private static readonly ILog s_logger = LogManager.GetLogger (System.Reflection.MethodInfo.GetCurrentMethod().DeclaringType);
@@ -29,19 +34,25 @@ namespace CalDavSynchronizer.AutomaticUpdates
     public Version GetVersionOfDefaultDownload ()
     {
       string site;
+      VersionResponse siteJSON;
 
       using (var client = HttpUtility.CreateWebClient())
       {
+        client.Headers.Add("Accept", "application/json");
+
         site = client.DownloadString (WebResourceUrls.SiteContainingCurrentVersion);
+
+        siteJSON = JsonConvert.DeserializeObject<VersionResponse>(site);
       }
-      var match = Regex.Match (site, @"OutlookCalDavSynchronizer-(?<Major>\d+).(?<Minor>\d+).(?<Build>\d+).zip");
-      
+      var match = Regex.Match (siteJSON.tag_name, @"v(?<Major>\d+).(?<Minor>\d+).(?<Build>\d+)\+(?<Revision>\d+)");
+
       if (match.Success)
       {
         var availableVersion = new Version (
             int.Parse (match.Groups["Major"].Value),
             int.Parse (match.Groups["Minor"].Value),
-            int.Parse (match.Groups["Build"].Value));
+            int.Parse (match.Groups["Build"].Value),
+            int.Parse (match.Groups["Revision"].Value));
 
         return availableVersion;
       }
@@ -96,6 +107,13 @@ namespace CalDavSynchronizer.AutomaticUpdates
 
     public Uri DownloadLink (Version newVersion)
     {
+      UriBuilder builder = new UriBuilder(WebResourceUrls.LatestVersionZipFile);
+      int[] baseVersion = { newVersion.Major, newVersion.Minor, newVersion.Build };
+      string version = string.Join(".", baseVersion);
+      builder.Path = builder.Path.Replace("$LATEST_TAG", "v" + version + "+" + newVersion.Revision);
+      builder.Path = builder.Path.Replace("$LATEST_VERSION", version + "." + newVersion.Revision);
+      System.Diagnostics.Debug.WriteLine(builder.Path.ToString());
+      return builder.Uri;
     }
   }
 }
