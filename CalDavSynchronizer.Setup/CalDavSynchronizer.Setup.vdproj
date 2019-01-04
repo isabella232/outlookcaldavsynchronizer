@@ -5122,7 +5122,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SnapAppointments Outlook Sync"
         "ProductCode" = "8:{53975955-2A76-4617-BBB7-A020BD06F84D}"
-        "PackageCode" = "8:{E29F911C-7347-4477-A9FA-FE140AD1DBD4}"
+        "PackageCode" = "8:{45DDFEA1-A61A-40CD-9875-C6A5F1BD997E}"
         "UpgradeCode" = "8:{691063F4-DD9A-4264-948D-3FBD2565572C}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
