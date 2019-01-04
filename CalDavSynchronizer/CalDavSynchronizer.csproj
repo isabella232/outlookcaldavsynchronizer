@@ -110,6 +110,7 @@
     <DefineConstants>$(DefineConstants);TRACE</DefineConstants>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>0162</NoWarn>
   </PropertyGroup>
   <!--
     This section specifies references for the project.
