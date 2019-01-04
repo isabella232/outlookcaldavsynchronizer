@@ -77,7 +77,7 @@ namespace CalDavSynchronizer.Ui
       // _captionLabel
       // 
       this._captionLabel.AutoSize = true;
-      this._captionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this._captionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this._captionLabel.Location = new System.Drawing.Point(9, 11);
       this._captionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
       this._captionLabel.Name = "_captionLabel";
