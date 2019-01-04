@@ -5057,7 +5057,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_B9464A368EDA4FBF813D9C26C4B34467"
             {
-            "DefaultLocation" = "8:[MYDEFAULTINSTALLPATH]"
+            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -5137,7 +5137,7 @@
         "Subject" = "8:"
         "ARPCONTACT" = "8:Gerhard Zehetbauer"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:Synchronizes Appointments between Outlook and a CalDav Server"
+        "ARPCOMMENTS" = "8:Synchronizes events between Outlook and SnapAppointments."
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
@@ -5293,7 +5293,7 @@
                                                                     "Condition" = "8:"
                                                                     "Transitive" = "11:FALSE"
                                                                     "ValueTypes" = "3:1"
-                                                                    "Value" = "8:CalDavSynchronizer"
+                                                                    "Value" = "8:SnapAppointmentsOutlookSync"
                                                                     }
                                                                     "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_C8A1F650539143B9B12FFA34645297B0"
                                                                     {
