@@ -5129,7 +5129,7 @@
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:3.3.0"
+        "ProductVersion" = "8:3.3.0.0"
         "Manufacturer" = "8:SnapAppointments"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
