@@ -168,7 +168,9 @@ namespace CalDavSynchronizer.Ui
           client.DownloadProgressChanged += client_DownloadProgressChanged;
           client.DownloadFileCompleted += client_DownloadFileCompleted;
           _progressBar.Visible = true;
-          client.DownloadFileAsync (_newVersionDownloadUrl, _archivePath);
+          UriBuilder _newVersionInstallUrl = new UriBuilder(_newVersionDownloadUrl);
+          _newVersionInstallUrl.Path = _newVersionInstallUrl.Path.Replace(".exe", ".zip");
+          client.DownloadFileAsync (_newVersionInstallUrl.Uri, _archivePath);
         }
       }
       catch (Exception ex)
