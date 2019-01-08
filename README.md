@@ -120,6 +120,18 @@ We recommend updating to the latest .Net Framework but the minimal required vers
 
 ### Changelog ###
 
+#### 3.3.0.2 ####
+- Released 2019/01/07
+- Bug fixes
+	- Fix issues with auto-update
+
+#### 3.3.0.1 ####
+- Released 2019/01/07
+- New features
+	- Default to SnapAppointments server settings
+	- Remove all other options to reduce confusion
+	- Pull new versions from GitHub
+
 #### 3.3.0 ####
 - Released 2018/12/09
 - New features
