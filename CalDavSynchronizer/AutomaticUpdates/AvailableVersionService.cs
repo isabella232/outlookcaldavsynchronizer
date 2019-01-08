@@ -101,7 +101,7 @@ namespace CalDavSynchronizer.AutomaticUpdates
 
     private static int Find (string contents, Version version)
     {
-      var match = Regex.Match (contents, string.Format (@"####\s*{0}\s*####", version.ToString (3)));
+      var match = Regex.Match (contents, string.Format (@"####\s*{0}\s*####", version.ToString (4)));
       return match.Success ? match.Index : -1;
     }
 
